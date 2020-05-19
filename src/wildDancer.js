@@ -38,7 +38,7 @@ MakeWildDancer.prototype.setPosition = function (top, left) {
     left: left
   };
   this.$node.css(styleSettings);
-  MakeDancer.prototype.step.call(this);
+  //MakeDancer.prototype.step.call(this);
   setTimeout(this.setPosition.bind(this), this.timeBetweenSteps);
   this.$node.toggle();
 };
