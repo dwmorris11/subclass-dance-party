@@ -1,11 +1,37 @@
-var MakeSpiralDancer = function(top, left, timeBetweenSteps) {
+var MakeWildDancer = function(top, left, timeBetweenSteps) {
   MakeDancer.call(this, top, left, timeBetweenSteps);
 };
 
-MakeSpiralDancer.prototype = Object.create(MakeDancer.prototype);
-MakeSpiralDancer.prototype.constructor = MakeSpiralDancer;
+MakeWildDancer.prototype = Object.create(MakeDancer.prototype);
+MakeWildDancer.prototype.constructor = MakeWildDancer;
 
-MakeSpiralDancer.prototype.setPosition = function (top, left) {
+MakeWildDancer.prototype.setPosition = function (top, left) {
+  //Make a random number between -1 and +1
+  //Make a second random number between -1 and +1
+  //Calculate a new top position by adding it to the first random number
+  //Calculate a new left position by adding it to the second random number
+  //if new top exceeds body.height then set new top to body.height
+  //if new top is less than zero then set new top to zero
+  //if new left exceeds body.width then set new left to body.width
+  //if new left is less than zero then set new left to zero
+  var min = -1;
+  var max = 1;
+  var random1 = Math.floor(Math.random()*(max-min)) + min;
+  var random2 = Math.floor(Math.random()*(max-min)) + min;
+  top = top + random1;
+  left = left + random2;
+  if(top > $("body").height()) {
+    top = $("body").height();
+  }
+  if(top < 0) {
+    top = 0;
+  }
+  if(left > $("body").width()) {
+    left = $("body").width();
+  }
+  if(left < 0) {
+    left = 0;
+  }
   MakeDancer.prototype.setPosition.call(this, top, left);
   this.$node.toggle();
 };
