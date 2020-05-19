@@ -5,6 +5,9 @@ body{
   /* margin: 0px;
   background-color:#444;
   font-size: 18px; */
+  background-image: url("images/purple_dance_floor-01.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
 }
 body, a:link, a:visited, a:active{
   color: lightblue;
@@ -26,5 +29,7 @@ body, a:link, a:visited, a:active{
   position:absolute;
 }
 .floor{
-  background-image: "images/purple_dance_floor-01.jpg";
+  display: flex;
+
+  background-image: url("images/purple_dance_floor-01.jpg");
 }
