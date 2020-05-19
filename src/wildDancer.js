@@ -1,11 +1,11 @@
-var MakeWildDancer = function(top, left, timeBetweenSteps) {
+var MakeSpiralDancer = function(top, left, timeBetweenSteps) {
   MakeDancer.call(this, top, left, timeBetweenSteps);
 };
 
-MakeWildDancer.prototype = Object.create(MakeDancer.prototype);
-MakeWildDancer.prototype.constructor = MakeWildDancer;
+MakeSpiralDancer.prototype = Object.create(MakeDancer.prototype);
+MakeSpiralDancer.prototype.constructor = MakeSpiralDancer;
 
-MakeWildDancer.prototype.setPosition = function () {
+MakeSpiralDancer.prototype.setPosition = function () {
   MakeDancer.prototype.setPosition.call(this);
   this.$node.toggle();
 };
