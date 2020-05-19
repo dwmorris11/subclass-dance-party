@@ -5,7 +5,7 @@ var MakeSpiralDancer = function(top, left, timeBetweenSteps) {
 MakeSpiralDancer.prototype = Object.create(MakeDancer.prototype);
 MakeSpiralDancer.prototype.constructor = MakeSpiralDancer;
 
-MakeSpiralDancer.prototype.setPosition = function () {
-  MakeDancer.prototype.setPosition.call(this);
+MakeSpiralDancer.prototype.setPosition = function (top, left) {
+  MakeDancer.prototype.setPosition.call(this, top, left);
   this.$node.toggle();
 };

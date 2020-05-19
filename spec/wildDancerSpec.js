@@ -19,7 +19,7 @@ describe('wildDancer', function() {
   });
   console.log('this is where we are at');
   describe('dance', function() {
-    it('should call step at least once per second', function() {
+    it('should call setPosition at least once per second', function() {
       sinon.spy(wildDancer, 'setPosition');
       expect(wildDancer.setPosition.callCount).to.be.equal(0);
       clock.tick(timeBetweenSteps); // ? it seems an extra tick is necessary...
