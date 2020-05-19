@@ -1,3 +1,4 @@
+
 body, html{
   height:100%;
 }
@@ -23,13 +24,43 @@ body, a:link, a:visited, a:active{
 .title{
   background-color: #777;
 }
-.dancer{
-  border:10px solid red;
-  border-radius:10px;
+
+.beebs{
+  content: url("images/beebs.jpg");
+  height: 80px;
+  width: 80px;
+  border-radius:50%;
   position:absolute;
 }
-.floor{
-  display: flex;
 
-  background-image: url("images/purple_dance_floor-01.jpg");
+.beyonce{
+  content: url("images/beyonce.jpg");
+  height: 80px;
+  width: 80px;
+  border-radius:50%;
+  position:absolute;
+}
+
+.bbking{
+  content: url("images/BBKing.jpg");
+  height: 80px;
+  width: 80px;
+  border-radius:50%;
+  position:absolute;
+}
+
+.LBJ{
+  content: url("images/LBJ.jpg");
+  height: 80px;
+  width: 80px;
+  border-radius:50%;
+  position:absolute;
+}
+
+.susieb{
+  content: url("images/SuzieB.jpg");
+  height: 80px;
+  width: 80px;
+  border-radius:50%;
+  position:absolute;
 }
