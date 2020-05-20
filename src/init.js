@@ -14,9 +14,8 @@ $(document).ready(function() {
       $("body").width() * Math.random(),
       Math.random() * 1000
     );
-    $('body').append(dancer.$node);
+    $('body').append(dancer.$node[0]);
     window.dancers.push(dancer);
-
   };
 
   $('.addDancerButton').on('click', function(event) {

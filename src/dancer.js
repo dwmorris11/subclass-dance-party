@@ -2,7 +2,6 @@
 var MakeDancer = function(top, left, timeBetweenSteps) {
   //Generate a random number 1-5
   var randomHead = Math.floor(Math.random() * 5);
-  console.log(randomHead);
   //set var id to that number
   //put in the span tag below
   var headName = ['beebs', 'beyonce', 'bbking', 'LBJ', 'susieb'];

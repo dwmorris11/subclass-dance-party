@@ -20,14 +20,14 @@ MakeWildDancer.prototype.setPosition = function (top, left) {
   var random2 = Math.floor(Math.random()*(max-min)) + min;
   top = this.top + random1;
   left = this.left + random2;
-  if(top > $("body").height()) {
-    top = $("body").height();
+  if(top > $("body").height()-110) {
+    top = $("body").height()-110;
   }
   if(top < 0) {
     top = 0;
   }
-  if(left > $("body").width()) {
-    left = $("body").width();
+  if(left > $("body").width()-110) {
+    left = $("body").width()-110;
   }
   if(left < 0) {
     left = 0;
