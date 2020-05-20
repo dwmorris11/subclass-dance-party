@@ -16,6 +16,7 @@ $(document).ready(function() {
     );
     $('body').append(dancer.$node[0]);
     window.dancers.push(dancer);
+    ouch();
   };
 
   $('.addDancerButton').on('click', function(event) {

@@ -15,9 +15,18 @@ var randomDance = function () {
 };
 
 var ouch = function () {
-  for (let i = 0; i < window.dancers.length; i++) {
-    if(window.dancers[window.dancers.length-1] === window.dancers[i]) {
-      $node = $('<span class="ouch"></span>');
+  for (let i = 0; i < window.dancers.length-1; i++) {
+    var lastDancerTop = window.dancers[window.dancers.length-1].top;
+    var currentDancerTop = window.dancers[i].top;
+    var lastDancerLeft = window.dancers[window.dancers.length-1].left;
+    var currentDancerLeft = window.dancers[i].left;
+    if(Math.abs(lastDancerTop - currentDancerTop)  < 80 && Math.abs(lastDancerLeft - currentDancerLeft < 80)) {
+      var ouchTop = window.dancers[i].top;
+      var ouchLeft = window.dancers[i].left;
+      $newNode = $('<span class="ouch"></span>');
+      var styleString = String('position: absolute, top: ' + ouchTop + ', left: ' + ouchLeft);
+      $newNode.attr('style', styleString);
+      $('body').append($newNode);
     }
   }
 

@@ -69,6 +69,11 @@ body, a:link, a:visited, a:active{
   position:absolute;
 }
 
+.ouch{
+  content: url("images/Ouch.png");
+  border-radius:15%;
+}
+
 .spiralDancer{
   animation: dancemoves 1s infinite;
   animation-direction: alternate;
