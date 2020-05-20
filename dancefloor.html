@@ -7,12 +7,27 @@
     <script src="src/dancer.js"></script>
     <script src="src/blinkyDancer.js"></script>
     <script src="src/wildDancer.js"></script>
+    <script src="src/spiralDancer.js"></script>
+    <script src="src/lineUp.js"></script>
   </head>
   <body>
     <div class="topbar">
-      <span class="title">object dance party</span>
+      <span class="title">bee dance party</span>
       <a href="#" class="addDancerButton" data-dancer-maker-function-name="MakeBlinkyDancer">add a blinky dancer</a>
-      <a href="#" class="addDancerButton" data-dancer-maker-function-name="MakeWildDancer">add a wild dancer</a></div>
+      <a href="#" class="addDancerButton" data-dancer-maker-function-name="MakeWildDancer">add a wild dancer</a>
+      <a href="#" class="addDancerButton" data-dancer-maker-function-name="MakeSpiralDancer">add a spiral dancer</a>
+      <a href="#" class="lineUp" data-dancer-maker-function-name="lineUp">line up</a>
+      <a href="#" class="lineUp" data-dancer-maker-function-name="randomDance">random dance</a></div>
     <script src="src/init.js"></script>
+    <script>
+    $('.LBJ').on("mouseover", function() {
+    //query object for the constructor
+    var dancerType = $(this).constructor.name;
+    console.log('dancerType: ', dancerType);
+    if(dancerType === 'MakeBlinkyDancer') {
+      addNewDancer.call($(this));
+    }
+  });
+    </script>
   </body>
 </html>

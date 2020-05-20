@@ -22,7 +22,6 @@ var MakeDancer = function(top, left, timeBetweenSteps) {
   this.top = top;
   this.left = left;
   // now that we have defined the dancer object, we can start setting up important parts of it by calling the methods we wrote
-  console.log('Class this: ', this);
   this.step();
 
   // this one sets the position to some random default point within the body
@@ -40,8 +39,8 @@ MakeDancer.prototype.setPosition = function(top, left) {
   // where it belongs on the page. See http://api.jquery.com/css/
   //
   var styleSettings = {
-    top: this.top,
-    left: this.left
+    top: top,
+    left: left
   };
   this.$node.css(styleSettings);
 };
