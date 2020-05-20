@@ -71,7 +71,12 @@ body, a:link, a:visited, a:active{
 
 .ouch{
   content: url("images/Ouch.png");
+  height: 90px;
+  width: 120px;
   border-radius:15%;
+  position:absolute;
+  top: 50%;
+  left: 50%;
 }
 
 .spiralDancer{

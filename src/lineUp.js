@@ -24,9 +24,10 @@ var ouch = function () {
       var ouchTop = window.dancers[i].top;
       var ouchLeft = window.dancers[i].left;
       $newNode = $('<span class="ouch"></span>');
-      var styleString = String('position: absolute, top: ' + ouchTop + ', left: ' + ouchLeft);
+      var styleString = String('top: ' + ouchTop + 'px, left: ' + ouchLeft + 'px');
       $newNode.attr('style', styleString);
       $('body').append($newNode);
+      $newNode.fadeOut(5000);
     }
   }
 
